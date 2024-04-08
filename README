@@ -1,0 +1,30 @@
+Dans la classe `Server`, la méthode `handleRequest(String request)` définit la logique pour traiter les commandes envoyées par les clients. Voici les commandes attendues par le serveur et leur format de formulation :
+
+1. **CREATE_NODE :** Créer un nouveau nœud dans l'anneau Chord.
+   - Format de la commande : "CREATE_NODE [nodeId]"
+
+2. **DELETE_NODE :** Supprimer un nœud spécifié de l'anneau Chord.
+   - Format de la commande : "DELETE_NODE [nodeId]"
+
+3. **LIST_NODES :** Obtenir la liste de tous les nœuds présents dans l'anneau Chord.
+   - Format de la commande : "LIST_NODES"
+
+4. **READ_DATA :** Lire des données à partir d'un nœud spécifié de l'anneau Chord.
+   - Format de la commande : "READ_DATA [nodeId]"
+
+5. **LOAD_DATA :** Charger des données sur les nœuds de l'anneau Chord à partir d'un fichier.
+   - Format de la commande : "LOAD_DATA [nodeId] [filePath]"
+
+6. **DISPLAY_DATA_PARTITIONS :** Afficher les partitions de données sur les nœuds de l'anneau Chord.
+   - Format de la commande : "DISPLAY_DATA_PARTITIONS"
+
+7. **ADD_DATA :** Ajouter des données à un nœud spécifié de l'anneau Chord.
+   - Format de la commande : "ADD_DATA [nodeId] [data]"
+
+8. **HELP :** Obtenir de l'aide sur les commandes disponibles.
+   - Format de la commande : "HELP"
+
+9. **QUIT :** Quitter le programme.
+   - Format de la commande : "QUIT"
+
+Pour toutes ces commandes, le serveur s'attend à ce que le client envoie la commande suivie des arguments nécessaires, le cas échéant, séparés par des espaces. Par exemple, pour la commande "ADD_DATA", le client doit envoyer "ADD_DATA [nodeId] [data]". Assurez-vous que le client envoie les commandes dans le format correct pour que le serveur puisse les traiter correctement.
